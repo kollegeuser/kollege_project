@@ -1,64 +1,153 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Реєстрація студента</title>
+    <style>
+        div {
+            margin-bottom: 10px;
+        }
+    </style>
 </head>
+
 <body>
-    
-<form action="submit.php" method="post">
+    <header>
+        <h1>Реєстрація студента</h1>
+    </header>
 
-<label for="Text Input">Full name:</label>
-<input type="text" id="Text Input" name="Text Input">
+    <main>
+        <section>
+            <form action="." method="post" enctype="multipart/form-data">
+                <h2>Персональна інформація</h2>
+                <fieldset>
+                    <legend>Надайте ваші дані</legend>
 
-<label for="Email Input">Email:</label>
-<input type="email" id="Email Input" name="Email Input">
+                    <div>
+                        <label for="fullname">Повне ім'я:</label>
+                        <input type="text" id="fullname" name="fullname" placeholder="Введіть ваше повне ім'я" required>
+                    </div>
 
-<label for="Password Input">Password:</label>
-<input type="password" id="Password Input" name="Password Input">
+                    <div>
+                        <label for="email">Електронна пошта:</label>
+                        <input type="email" id="email" name="email" placeholder="Введіть вашу пошту" required>
+                    </div>
 
-<label for="Number Input">Age:</label>
-<input type="number" id="Number Input" name="Number Input">
+                    <div>
+                        <label for="password">Пароль:</label>
+                        <input type="password" id="password" name="password" placeholder="Введіть пароль" required>
+                    </div>
 
-<label for="Date Input">Date of birth:</label>
-<input type="date" id="Date Input" name="Date Input">
+                    <div>
+                        <label for="age">Вік:</label>
+                        <input type="number" id="age" name="age" min="0" max="120" required>
+                    </div>
 
-<label for="Radio Buttons">Gender:</label>
-<input type="radio" id="Radio Buttons" name="Radio Buttons">
+                    <div>
+                        <label for="date">Дата народження:</label>
+                        <input type="date" id="date" name="date">
+                    </div>
 
-<label for="Checkboxes">Languages Known:</label>
-<input type="checkbox" id="Checkboxes" name="Checkboxes">
+                    <div>
+                        <label>Стать:</label><br>
+                        <input type="radio" id="male" name="gender" value="male">
+                        <label for="male">Чоловік</label><br>
+                        <input type="radio" id="female" name="gender" value="female">
+                        <label for="female">Жінка</label><br>
+                        <input type="radio" id="other" name="gender" value="other">
+                        <label for="other">Інше</label>
+                    </div>
 
-<label for="Select Box">Country:</label>
-<input type="select" id="Select Box" name="Select Box">
+                    <div>
+                        <label>Відомі мови:</label><br>
+                        <input type="checkbox" id="languages1" name="languages" value="english">
+                        <label for="languages1">Англійська</label><br>
+                        <input type="checkbox" id="languages2" name="languages" value="spanish">
+                        <label for="languages2">Іспанська</label><br>
+                        <input type="checkbox" id="languages3" name="languages" value="french">
+                        <label for="languages3">Французька</label>
+                    </div>
 
-<label for="Multi-select Box">College Subjects:</label>
-<input type="select multiple" id="Multi-select Box" name="Multi-select Box">
+                    <div>
+                        <label for="country">Країна:</label>
+                        <select id="country" name="country" required>
+                            <option value="">Виберіть країну</option>
+                            <option value="ukraine">Україна</option>
+                            <option value="usa">США</option>
+                            <option value="canada">Канада</option>
+                            <option value="uk">Великобританія</option>
+                        </select>
+                    </div>
 
-<label for="Range Slider">Rate Interest in Computer
-Science:</label>
-<input type="range" id="Range Slider" name="Range Slider">
+                </fieldset>
 
-<label for="Textarea">Describe Skills:</label>
-<input type="textarea" id="Textarea" name="Textarea">
+                <hr>
 
-<label for="File Upload">Upload Resume:</label>
-<input type="file" id="File Upload" name="File Upload">
+                <h2>Навчальні предмети</h2>
+                <fieldset>
+                    <legend>Виберіть ваші предмети</legend>
 
-<label for="Color Picker">Pick Favorite Color:</label>
-<input type="color" id="Color Picker" name="Color Picker">
+                    <div>
+                        <label for="subjects">Виберіть предмети:</label>
+                        <br>
+                        <select multiple id="subjects" name="subjects" size="4">
+                            <option value="math">Математика</option>
+                            <option value="cs">Комп'ютерні науки</option>
+                            <option value="physics">Фізика</option>
+                            <option value="chemistry">Хімія</option>
+                            <option value="biology">Біологія</option>
+                            <option value="history">Історія</option>
+                        </select>
+                    </div>
 
-<label for="Time Picker">Preferred Study Time:</label>
-<input type="time" id="Time Picker" name="Time Picker">
+                    <div>
+                        <label for="range">Оцініть інтерес у комп'ютерних науках:</label>
+                        <input type="range" id="range" name="range">
+                    </div>
 
-<label for="Submit Button">Submit Survey:</label>
-<input type="submit" id="Submit Button" name="Submit Button">
+                </fieldset>
 
+                <hr>
 
+                <h2>Додаткова інформація</h2>
+                <fieldset>
+                    <legend>Оцініть свої навички</legend>
+                    
+                    <div>
+                        <label for="textarea">Опишіть свої навички:</label>
+                        <br>
+                        <textarea id="textarea" name="textarea" rows="4" cols="50" placeholder="Вкажіть ваші навички тут..."></textarea>
+                    </div>
 
-<button type="submit">Відправити</button>
-</form>
+                    <div>
+                        <label for="file">Завантажте ваше резюме:</label>
+                        <input type="file" id="file" name="file">
+                    </div>
 
+                    <div>
+                        <label for="color">Виберіть улюблений колір:</label>
+                        <input type="color" id="color" name="color" value="#000000">
+                    </div>
+
+                    <div>
+                        <label for="time">Бажаний час навчання:</label>
+                        <input type="time" id="time" name="time">
+                    </div>
+
+                    <div>
+                        <button type="submit">Надіслати опитування</button>
+                    </div>
+                </fieldset>
+
+                <hr>
+
+                <footer>
+                    <p>&copy; Студентська картка від {ваше ім'я}. Всі права захищені.</p>
+                </footer>
+            </form>
+        </section>
+    </main>
 </body>
+
 </html>
