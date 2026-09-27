@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Зворотний зв'язок та Підписка</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Зв'яжіться з нами ✉️</h1>
+        <p>Маєте запитання, пропозиції щодо нових маршрутів або просто хочете поділитися враженнями? Напишіть нам!</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Головна</a></li>
+            <li><a href="kyiv.html">Київ</a></li>
+            <li><a href="tokyo.html">Токіо</a></li>
+            <li><a href="rome.html">Рим</a></li>
+            <li><a href="gallery.html">Галерея</a></li>
+            <li><a href="contact.html">Контакти та Підписка</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <!-- Форма зворотного зв'язку -->
+        <section>
+            <form action="#" method="post">
+                <h2>Напишіть нам</h2>
+                
+                <label for="user-name">Ваше ім'я:</label>
+                <input type="text" id="user-name" name="name" required placeholder="Олександр">
+
+                <label for="user-email">Ваш Email:</label>
+                <input type="email" id="user-email" name="email" required placeholder="example@mail.com">
+
+                <label for="msg-subject">Тема повідомлення:</label>
+                <input type="text" id="msg-subject" name="subject" required placeholder="Порада щодо подорожі">
+
+                <label for="user-message">Повідомлення:</label>
+                <textarea id="user-message" name="message" rows="5" required placeholder="Ваш відгук чи запитання..."></textarea>
+
+                <button type="submit">Надіслати повідомлення</button>
+            </form>
+        </section>
+
+        <!-- Форма підписки на новини -->
+        <section>
+            <form action="#" method="post">
+                <h2>Підписка на новини блогу 📬</h2>
+                <p>Отримуйте свіжі статті та маршрути першими!</p>
+
+                <label for="newsletter-email">Електронна пошта:</label>
+                <input type="email" id="newsletter-email" name="newsletter_email" required placeholder="Введіть ваш email">
+
+                <div style="margin-bottom: 20px;">
+                    <input type="checkbox" id="consent" name="consent" required style="width: auto; margin-right: 8px;">
+                    <label for="consent" style="display: inline; font-size: 15px;">Я погоджуюся на отримання розсилки та обробку персональних даних</label>
+                </div>
+
+                <button type="submit">Підписатися</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <nav>
+            <ul>
+                <li><a href="#">Про нас</a></li>
+                <li><a href="#">Політика конфіденційності</a></li>
+                <li><a href="#">Умови використання</a></li>
+            </ul>
+        </nav>
+        <div class="social-media">
+            <a href="#" aria-label="Faceblock">Faceblock</a>
+            <a href="#" aria-label="Tweety">Tweety</a>
+            <a href="#" aria-label="Instadrama">Instadrama</a>
+        </div>
+        <p>Контакти: <a href="mailto:info@adventuresblog.com">info@adventuresblog.com</a></p>
+        <p>&copy; 2026 Student Adventures Blog. Усі права захищено.</p>
+    </footer>
+
+</body>
+</html>
