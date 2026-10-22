@@ -1,0 +1,166 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+  color: #333;
+  background-color: #fff;
+}
+
+.header {
+  background-color: #397d3e;
+  color: #fff;
+  text-align: center;
+  padding: 15px 0;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 20px auto;
+}
+
+.section {
+  margin-bottom: 30px;
+}
+
+.section h2 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 12px;
+  color: #111;
+}
+
+/* 2.1 Float стилі */
+.float-block {
+  margin-bottom: 15px;
+}
+
+.img-left {
+  float: left;
+  margin-right: 15px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.separator-text {
+  clear: both;
+  margin-bottom: 15px;
+}
+
+/* 2.3 Multicolumn макет */
+.multicolumn-text {
+  column-count: 4;
+  column-gap: 25px;
+  column-rule: 1px solid #ddd;
+  text-align: justify;
+}
+
+@media (max-width: 900px) {
+  .multicolumn-text {
+    column-count: 2;
+  }
+}
+
+@media (max-width: 600px) {
+  .multicolumn-text {
+    column-count: 1;
+  }
+}
+
+/* Кнопки */
+.btn {
+  background-color: #397d3e;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  border-radius: 3px;
+  transition: background-color 0.2s;
+}
+
+.btn:hover {
+  background-color: #2e6632;
+}
+
+.footer-desc {
+  margin-top: 15px;
+}
+
+/* 2.2 & 2.4 Position і z-index */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  visibility: visible;
+  opacity: 1;
+}
+
+.modal-window {
+  background-color: #ffffff;
+  padding: 30px 25px;
+  border-radius: 4px;
+  position: relative;
+  width: 90%;
+  max-width: 580px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+  z-index: 1001;
+}
+
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  background: none;
+  border: none;
+  font-size: 22px;
+  color: #777;
+  cursor: pointer;
+}
+
+.modal-close:hover {
+  color: #000;
+}
+
+.modal-label {
+  display: block;
+  font-size: 0.85rem;
+  text-align: center;
+  margin-bottom: 12px;
+  color: #444;
+}
+
+.input-row {
+  display: flex;
+  gap: 8px;
+}
+
+.input-row input[type="email"] {
+  flex: 1;
+  padding: 7px 10px;
+  border: 1px solid #aaa;
+  border-radius: 2px;
+  outline: none;
+}
+
+.btn-submit {
+  padding: 7px 14px;
+}
