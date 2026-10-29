@@ -1,0 +1,212 @@
+/* 1. Скидання стилів */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #2D2D2D;
+  background-color: #F8F7FF; /* Легкий світло-бузковий відтінок фону з макета */
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* 2. Контейнер */
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 48px;
+}
+
+/* 3. Хедер */
+.header {
+  padding: 24px 0;
+  background-color: #FFFFFF;
+}
+
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-icon {
+  width: 28px;
+  height: auto;
+  display: block;
+}
+
+.logo-text {
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: #1E1E1E;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.nav__link {
+  font-size: 15px;
+  font-weight: 500;
+  color: #2D2D2D;
+  transition: opacity 0.2s ease;
+}
+
+.nav__link:hover {
+  opacity: 0.7;
+}
+
+/* Кнопка Log in у верхньому кутку */
+.btn--login {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 24px;
+  background-color: #2D68FE;
+  color: #FFFFFF;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+}
+
+.btn--login:hover {
+  background-color: #1e52d6;
+}
+
+/* 4. Hero секція */
+.hero {
+  padding: 80px 0 60px;
+}
+
+.hero__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.hero__content {
+  flex: 1;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 28px;
+}
+
+.hero__title {
+  font-size: 56px;
+  line-height: 1.15;
+  font-weight: 700;
+  color: #1E1E1E;
+  letter-spacing: -0.02em;
+}
+
+.hero__subtitle {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #6B6B6B;
+}
+
+/* Жовта кнопка Get Started */
+.btn--primary {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px 36px;
+  background-color: #FBD37D;
+  color: #1E1E1E;
+  font-weight: 600;
+  font-size: 16px;
+  border-radius: 8px;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.btn--primary:hover {
+  background-color: #f7c65c;
+  transform: translateY(-2px);
+}
+
+.hero__media {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.hero__img {
+  width: 100%;
+  max-width: 520px;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+/* 5. Блок відео */
+.video-section {
+  padding: 40px 0 80px;
+}
+
+.video-section__container {
+  display: flex;
+  justify-content: center;
+}
+
+.video-card {
+  width: 100%;
+  max-width: 820px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+}
+
+.video-card__preview {
+  width: 100%;
+  display: block;
+}
+
+/* Адаптив під мобільні пристрої */
+@media (max-width: 768px) {
+  .hero__container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero__content {
+    align-items: center;
+    max-width: 100%;
+  }
+
+  .hero__title {
+    font-size: 36px;
+  }
+
+  .hero__media {
+    justify-content: center;
+  }
+}
