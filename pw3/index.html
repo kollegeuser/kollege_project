@@ -1,0 +1,228 @@
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="World Trivia — цікаві факти, вікторини та щоденні головоломки.">
+    <title>World Trivia — вікторини та цікаві факти</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <a class="logo" href="#home" aria-label="World Trivia — на головну">
+            World Trivia
+        </a>
+
+        <nav aria-label="Головна навігація">
+            <ul class="nav-list">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#trivia">Trivia</a></li>
+                <li><a href="#categories">Categories</a></li>
+                <li><a href="#scores">Scores</a></li>
+                <li><a href="#subscribe">Subscribe</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- Home -->
+        <section id="home" class="section home-section">
+            <h1>Discover the World with World Trivia!</h1>
+            <p>
+                Перевіряйте свої знання, відкривайте цікаві факти
+                з усього світу та змагайтеся з іншими учасниками.
+                Обирайте категорію, проходьте вікторини й
+                покращуйте власні результати.
+            </p>
+        </section>
+
+        <!-- Trivia -->
+        <section id="trivia" class="section">
+            <h2>Today's Trivia</h2>
+
+            <div class="trivia-list">
+
+                <article class="trivia-card">
+                    <img
+                        src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=500&q=80"
+                        alt="Зоряне небо над гірськими вершинами">
+
+                    <div>
+                        <h3>Space & Science</h3>
+                        <p>
+                            Дізнайтеся більше про планети,
+                            космос і дивовижні наукові відкриття.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="trivia-card">
+                    <img
+                        src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=500&q=80"
+                        alt="Зелений гірський краєвид">
+
+                    <div>
+                        <h3>Nature & Geography</h3>
+                        <p>
+                            Перевірте знання про материки,
+                            океани, тварин і природні явища.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="trivia-card">
+                    <img
+                        src="https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?auto=format&fit=crop&w=500&q=80"
+                        alt="Старовинні книги на полиці">
+
+                    <div>
+                        <h3>History & Culture</h3>
+                        <p>
+                            Відкрийте цікаві сторінки історії,
+                            мистецтва та культури різних народів.
+                        </p>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- Categories -->
+        <section id="categories" class="section">
+            <h2>Choose a Category</h2>
+
+            <ul class="category-list">
+                <li><a href="#trivia">Science</a></li>
+                <li><a href="#trivia">Geography</a></li>
+                <li><a href="#trivia">History</a></li>
+                <li><a href="#trivia">Technology</a></li>
+                <li><a href="#trivia">Culture</a></li>
+            </ul>
+        </section>
+
+        <!-- Scores -->
+        <section id="scores" class="section">
+            <h2>Top Scores</h2>
+
+            <div class="table-wrapper">
+                <table>
+                    <caption class="sr-only">
+                        Таблиця найкращих результатів учасників
+                    </caption>
+
+                    <thead>
+                        <tr>
+                            <th scope="col">Rank</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Score</th>
+                            <th scope="col">Country</th>
+                            <th scope="col">Category</th>
+                            <th scope="col">Date</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Alex</td>
+                            <td>980</td>
+                            <td>Ukraine</td>
+                            <td>Science</td>
+                            <td>2026-11-18</td>
+                        </tr>
+
+                        <tr>
+                            <td>2</td>
+                            <td>Maria</td>
+                            <td>940</td>
+                            <td>Austria</td>
+                            <td>History</td>
+                            <td>2026-11-17</td>
+                        </tr>
+
+                        <tr>
+                            <td>3</td>
+                            <td>Daniel</td>
+                            <td>910</td>
+                            <td>Poland</td>
+                            <td>Geography</td>
+                            <td>2026-11-16</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Subscribe -->
+        <section id="subscribe" class="section subscribe-section">
+            <h2>Puzzle of the Day</h2>
+
+            <p>
+                Отримуйте щоденну головоломку
+                та тренуйте ерудицію.
+            </p>
+
+            <button
+                class="subscribe-button"
+                type="button"
+                onclick="alert('Дякуємо! Ви підписалися на Puzzle of the Day.')">
+                Subscribe now
+            </button>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact" class="section">
+            <h2>Contact Us</h2>
+
+            <p>
+                Маєте запитання або пропозиції?
+                Напишіть нам.
+            </p>
+
+            <form
+                class="contact-form"
+                action="#"
+                method="post"
+                onsubmit="event.preventDefault(); alert('Дякуємо за повідомлення!');">
+
+                <label for="name">Ім’я</label>
+                <input
+                    id="name"
+                    name="name"
+                    type="text"
+                    autocomplete="name"
+                    required>
+
+                <label for="email">Email</label>
+                <input
+                    id="email"
+                    name="email"
+                    type="email"
+                    autocomplete="email"
+                    required>
+
+                <label for="message">Повідомлення</label>
+                <textarea
+                    id="message"
+                    name="message"
+                    rows="5"
+                    required></textarea>
+
+                <button type="submit">Надіслати</button>
+            </form>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <p>&copy; 2026 World Trivia. Усі права захищено.</p>
+        <a href="#home">На початок сторінки</a>
+    </footer>
+
+</body>
+</html>
